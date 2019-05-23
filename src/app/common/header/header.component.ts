@@ -12,4 +12,10 @@ export class HeaderComponent implements OnInit {
   ngOnInit() {
   }
 
+  // TODO: あとで実装する。
+  // 
+  public fetchCategories(): any {
+
+  }
+
 }

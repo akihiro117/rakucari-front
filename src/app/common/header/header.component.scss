@@ -2,17 +2,26 @@
   margin-top: 20px;
 }
 
+.search-box {
+  background-color: #EEEEEE;
+
+}
 
 @media screen and (min-width: 800px) {
   .search-box {
     width: 600px;
-    background-color: #EEEEEE;
   }
 }
 
 
 @media screen and (max-width: 800px) {
   .search-box {
-    width: 400px;
+    width: 500px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .search-box {
+    width: 100%;
   }
 }
