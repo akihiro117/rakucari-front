@@ -1,8 +1,8 @@
 <div class="container header">
   <div class="input-group" align="center">
-    <input class="form-control search-box" type="search" placeholder="何かお探しですか？">
+    <input class="form-control search-box" type="search" placeholder="何かお探しですか？" [(ngModel)]="searchWords">
     <div class="input-group-append">
-      <button class="input-group btn btn-primary">検索</button>
+      <button class="input-group btn btn-primary" (click)="searchItems()">検索</button>
     </div>
   </div>
 </div>
