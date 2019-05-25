@@ -38,15 +38,31 @@ $largeDisplayWidth: 800px;
   margin-top: 10px;
 }
 
-.pull-down {
+.pull-down-group {
+  padding-left: 0px;
+}
+
+.pull-down-menu {
   cursor: pointer;
   color: #333333;
   vertical-align: middle;
   margin-right: 20px;
+  list-style: none;
 }
 
-.pull-down:hover {
+.pull-down-menu:hover {
   color: #2C7CFF;
+}
+
+// .pull-down-group {
+//   position: relative;
+// }
+
+.pull-down-list {
+  float: left;
+  list-style: none;
+  z-index: 100;
+  position: absolute;
 }
 
 // ----------------------------------------------

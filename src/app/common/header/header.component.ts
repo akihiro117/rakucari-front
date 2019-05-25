@@ -9,6 +9,35 @@ export class HeaderComponent implements OnInit {
 
   public searchWords: string;
 
+  // 'カテゴリーから探す'にhoverしたかどうか
+  public categoryHover = false;
+
+  // サブカテゴリーにhoverしたかどうか
+  public subCategoryHover = false;
+
+  // ダミーのカテゴリー
+  // TODO: あとで消す
+  public categories = [
+    {
+      name: 'テスト1',
+      url: 'http://localhost:8080/test1',
+      subCategories: [
+        {
+          name: 'サブ1'
+        }
+      ]
+    },
+    {
+      name: 'テスト2',
+      url: 'http://localhost:8080/test1',
+      subCategories: [
+        {
+          name: 'サブ1'
+        }
+      ]
+    }
+  ];
+
   constructor() { }
 
   ngOnInit() {
@@ -29,6 +58,18 @@ export class HeaderComponent implements OnInit {
    */
   public searchItems(): any {
 
+  }
+
+  // 'カテゴリーから探す'にマウスが入った時に
+  // hoverフラグをtrueにして、サブカテゴリーのリストを表示する。
+  public changeCategoryHover(hoverFlug: boolean): void {
+    this.categoryHover = hoverFlug;
+  }
+
+  // 大項目のカテゴリーのリストにマウスが入った時に、
+  // hoverフラグをtrueにして、サブカテゴリーのリストを表示する。
+  public changeSubCategoryHover(hoverFlug: boolean): void {
+    this.subCategoryHover = hoverFlug;
   }
 
   // TODO: あとで実装する。
