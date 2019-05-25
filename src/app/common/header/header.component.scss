@@ -2,26 +2,19 @@
   margin-top: 20px;
 }
 
-.search-box {
-  background-color: #EEEEEE;
-
-}
-
 @media screen and (min-width: 800px) {
-  .search-box {
+  .search-box-group {
     width: 600px;
   }
 }
 
-
 @media screen and (max-width: 800px) {
-  .search-box {
-    width: 500px;
+  .search-box-group {
+    width: 300px;
   }
 }
 
-@media screen and (max-width: 500px) {
-  .search-box {
-    width: 100%;
-  }
+
+.search-box {
+  background-color: #EEEEEE;
 }
