@@ -31,4 +31,20 @@ export class HeaderComponent implements OnInit {
 
   }
 
+  // TODO: あとで実装する。
+  /**
+   * 新規会員登録画面に遷移する。
+   */
+  public toMemberRegistrationForm() {
+
+  }
+
+  // TODO: あとで実装する。
+  /**
+   * ログイン画面に遷移する。
+   */
+  public toLoginForm() {
+
+  }
+
 }

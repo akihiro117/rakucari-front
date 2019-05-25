@@ -1,20 +1,87 @@
+$maxHeaderWidth: 600px;
+$minHeaderWidth: 300px;
+$largeDisplayWidth: 800px;
+
+// ----------------------------------------------
+// どの画面サイズでも共通
+// ----------------------------------------------
 .header {
   margin-top: 20px;
 }
 
-@media screen and (min-width: 800px) {
-  .search-box-group {
-    width: 600px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .search-box-group {
-    width: 300px;
-  }
-}
-
-
 .search-box {
   background-color: #EEEEEE;
+}
+
+.btn-register {
+  background-color: #CC0000;
+  color: white;
+}
+
+.btn-register:hover {
+  background-color: #AA0000;
+}
+
+.btn-login {
+  background-color: white;
+  color: #005FFF;
+  border-color: #005FFF;
+}
+
+.btn-login:hover {
+  background-color: #005FFF;
+  color: white;
+  border-color: white;
+}
+
+.menu-group {
+  margin-top: 10px;
+}
+
+// ----------------------------------------------
+// PC用
+// ----------------------------------------------
+@media screen and (min-width: $largeDisplayWidth) {
+  // 検索ボックス
+  .search-box-group {
+    width: $maxHeaderWidth;
+  }
+
+  // 検索ボックス下のメニュー
+  .menu-group {
+    width: $maxHeaderWidth;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  // 新規登録ボタン
+  .btn-register {
+    margin-right: 10px;
+  }
+}
+
+// ----------------------------------------------
+// タブレット、スマホ用
+// ----------------------------------------------
+@media screen and (max-width: $largeDisplayWidth) {
+  .search-box-group {
+    width: $minHeaderWidth;
+  }
+
+  // 検索ボックス下のメニュー
+  .menu-group {
+    width: $minHeaderWidth;
+  }
+
+  // 新規登録ボタン
+  .btn-register {
+    width: $minHeaderWidth;
+    margin-bottom: 10px;
+  }
+
+  // ログインボタン
+  .btn-login {
+    width: $minHeaderWidth;
+  }
+
 }
