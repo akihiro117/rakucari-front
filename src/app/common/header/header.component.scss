@@ -1,4 +1,4 @@
-$maxHeaderWidth: 600px;
+$maxHeaderWidth: 700px;
 $minHeaderWidth: 300px;
 $largeDisplayWidth: 800px;
 
@@ -24,18 +24,29 @@ $largeDisplayWidth: 800px;
 
 .btn-login {
   background-color: white;
-  color: #005FFF;
-  border-color: #005FFF;
+  color: #2C7CFF;
+  border-color: #2C7CFF;
 }
 
 .btn-login:hover {
-  background-color: #005FFF;
+  background-color: #2C7CFF;
   color: white;
   border-color: white;
 }
 
 .menu-group {
   margin-top: 10px;
+}
+
+.pull-down {
+  cursor: pointer;
+  color: #333333;
+  vertical-align: middle;
+  margin-right: 20px;
+}
+
+.pull-down:hover {
+  color: #2C7CFF;
 }
 
 // ----------------------------------------------
