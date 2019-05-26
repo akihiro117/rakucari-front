@@ -54,15 +54,22 @@ $largeDisplayWidth: 800px;
   color: #2C7CFF;
 }
 
-// .pull-down-group {
-//   position: relative;
-// }
-
 .pull-down-list {
   float: left;
   list-style: none;
   z-index: 100;
   position: absolute;
+}
+
+.pull-down-content {
+  cursor: pointer;
+  color: #333333;
+  vertical-align: middle;
+}
+
+.pull-down-content:hover {
+  color: white;
+  background-color: #AA0000;
 }
 
 // ----------------------------------------------
