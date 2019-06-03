@@ -6,21 +6,28 @@
     </div>
   </div>
   <div class="menu-group" align="center">
-    <ul class="pull-down-group" (mouseleave)="changeCategoryHover(false); changeSubCategoryHover(false)">
-      <li class="pull-down-menu">
-        <span class="pull-down-menu" (mouseenter)="changeCategoryHover(true)"><b>カテゴリーから探す</b></span>
-        <span class="pull-down-menu"><b>ブランドから探す</b></span>
-      </li>
-      <ng-container *ngIf="categoryHover || subCategoryHover">
-        <div class="pull-down-list" (mouseenter)="changeSubCategoryHover(true)">
-          <ng-container *ngFor="let category of categories">
-            <li class="pull-down-content">
-              {{category.name}}
-            </li>
-          </ng-container>
-        </div>
-      </ng-container>
-    </ul>
+    <div class="search-group">
+      <ul class="pull-down-group" (mouseleave)="changeCategoryHover(false); changeSubCategoryHover(false)">
+        <li class="pull-down-menu">
+          <span class="pull-down-menu" (mouseenter)="changeCategoryHover(true)"><b>カテゴリーから探す</b></span>
+          <!-- <span class="pull-down-menu"><b>ブランドから探す</b></span> -->
+        </li>
+        <ng-container *ngIf="categoryHover || subCategoryHover">
+          <div class="pull-down-list" (mouseenter)="changeSubCategoryHover(true)">
+            <ng-container *ngFor="let category of categories">
+              <li class="pull-down-content">
+                {{category.name}}
+              </li>
+            </ng-container>
+          </div>
+        </ng-container>
+      </ul>
+      <ul class="pull-down-group">
+        <li class="pull-down-menu">
+          <span class="pull-down-menu"><b>ブランドから探す</b></span>
+        </li>
+      </ul>
+    </div>
     <div>
       <button class="btn btn-register" (click)="toMemberRegistrationForm()">新規会員登録</button>
       <button class="btn btn-login" (click)="toLoginForm()">ログイン</button>
