@@ -48,6 +48,7 @@ $largeDisplayWidth: 800px;
   vertical-align: middle;
   margin-right: 20px;
   list-style: none;
+  margin-bottom: 20px;
 }
 
 .pull-down-menu:hover {
@@ -64,12 +65,17 @@ $largeDisplayWidth: 800px;
 .pull-down-content {
   cursor: pointer;
   color: #333333;
-  vertical-align: middle;
+  width: 140px;
+  text-align: left;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-left: 5px;
+  border-bottom: 1px solid #C0C0C0;
 }
 
 .pull-down-content:hover {
   color: white;
-  background-color: #AA0000;
+  background-color: #DC143C;
 }
 
 // ----------------------------------------------
