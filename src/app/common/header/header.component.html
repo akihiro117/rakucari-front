@@ -1,6 +1,6 @@
 <div class="container header" align="center">
   <div class="input-group search-box-group">
-    <input class="form-control search-box" type="text" placeholder="何かお探しですか？" [(ngModel)]="searchWords">
+    <input class="form-control" type="text" placeholder="何かお探しですか？" [(ngModel)]="searchWords">
     <div class="input-group-append">
       <button class="input-group btn btn-primary" (click)="searchItems()">検索</button>
     </div>
@@ -9,8 +9,7 @@
     <div class="search-group">
       <ul class="pull-down-group" (mouseleave)="changeCategoryHover(false); changeSubCategoryHover(false)">
         <li class="pull-down-menu">
-          <span class="pull-down-menu" (mouseenter)="changeCategoryHover(true)"><b>カテゴリーから探す</b></span>
-          <!-- <span class="pull-down-menu"><b>ブランドから探す</b></span> -->
+          <span (mouseenter)="changeCategoryHover(true)"><b>カテゴリーから探す</b></span>
         </li>
         <ng-container *ngIf="categoryHover || subCategoryHover">
           <div class="pull-down-list" (mouseenter)="changeSubCategoryHover(true)">
@@ -24,7 +23,7 @@
       </ul>
       <ul class="pull-down-group">
         <li class="pull-down-menu">
-          <span class="pull-down-menu"><b>ブランドから探す</b></span>
+          <span><b>ブランドから探す</b></span>
         </li>
       </ul>
     </div>
@@ -33,5 +32,4 @@
       <button class="btn btn-login" (click)="toLoginForm()">ログイン</button>
     </div>
   </div>
-
 </div>

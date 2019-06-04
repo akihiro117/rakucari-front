@@ -9,8 +9,10 @@ $largeDisplayWidth: 800px;
   margin-top: 20px;
 }
 
-.search-box {
-  background-color: #EEEEEE;
+.search-box-group {
+  input {
+    background-color: #EEEEEE;
+  }
 }
 
 .btn-register {
@@ -48,16 +50,18 @@ $largeDisplayWidth: 800px;
 }
 
 .pull-down-menu {
-  cursor: pointer;
-  color: #333333;
   vertical-align: middle;
   margin-right: 0px;
   list-style: none;
   margin-bottom: 20px;
-}
-
-.pull-down-menu:hover {
-  color: #2C7CFF;
+  span {
+    vertical-align: middle;
+    cursor: pointer;
+    color: #333333;
+    &:hover {
+      color: #2C7CFF;
+    }
+  }
 }
 
 .pull-down-list {
@@ -76,11 +80,10 @@ $largeDisplayWidth: 800px;
   padding-bottom: 10px;
   padding-left: 5px;
   border-bottom: 1px solid #C0C0C0;
-}
-
-.pull-down-content:hover {
-  color: white;
-  background-color: #DC143C;
+  &:hover {
+    color: white;
+    background-color: #DC143C;
+  }
 }
 
 // ----------------------------------------------
@@ -128,5 +131,4 @@ $largeDisplayWidth: 800px;
   .btn-login {
     width: $minHeaderWidth;
   }
-
 }
