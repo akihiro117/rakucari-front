@@ -15,6 +15,10 @@ export class HeaderComponent implements OnInit {
   // サブカテゴリーにhoverしたかどうか
   public subCategoryHover = false;
 
+  // 中項目を表示する大項目のindex
+  // public displayedCategoryIndex: number = null;
+  public displayedSubCategories: Array<any> = null;
+
   // ダミーのカテゴリー
   // TODO: あとで消す
   public categories = [
@@ -24,6 +28,9 @@ export class HeaderComponent implements OnInit {
       subCategories: [
         {
           name: 'サブ1'
+        },
+        {
+          name: 'サブ2'
         }
       ]
     },
@@ -32,7 +39,7 @@ export class HeaderComponent implements OnInit {
       url: 'http://localhost:8080/test1',
       subCategories: [
         {
-          name: 'サブ1'
+          name: 'さぶ2'
         }
       ]
     }
@@ -71,6 +78,18 @@ export class HeaderComponent implements OnInit {
   public changeSubCategoryHover(hoverFlug: boolean): void {
     this.subCategoryHover = hoverFlug;
   }
+
+  // /**
+  //  * 中項目を表示する大項目のindexを設定する
+  //  * @param index 中項目を表示する大項目のindex
+  //  */
+  // public changeDisplayedCategoryIndex(index: number): void {
+  //   this.displayedCategoryIndex = index;
+  // }
+  public changeDisplayedSubCategories(categories: any): void {
+    this.displayedSubCategories = categories;
+  }
+
 
   // TODO: あとで実装する。
   /**

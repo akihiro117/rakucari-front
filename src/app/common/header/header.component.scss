@@ -64,6 +64,10 @@ $largeDisplayWidth: 800px;
   }
 }
 
+.pull-down-list-group {
+  display: flex;
+}
+
 .pull-down-list {
   float: left;
   list-style: none;
@@ -83,6 +87,20 @@ $largeDisplayWidth: 800px;
   &:hover {
     color: white;
     background-color: #DC143C;
+  }
+}
+
+.sub-pull-down-content {
+  cursor: pointer;
+  color: #333333;
+  width: 140px;
+  text-align: left;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 5px;
+  border-bottom: 1px solid #C0C0C0;
+  &:hover {
+    background-color: #CCCCCC;
   }
 }
 
