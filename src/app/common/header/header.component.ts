@@ -1,3 +1,4 @@
+import { CategoryService } from './category.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -45,7 +46,9 @@ export class HeaderComponent implements OnInit {
     }
   ];
 
-  constructor() { }
+  public testJson: any;
+
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
     this.fetchCategories();
@@ -56,7 +59,7 @@ export class HeaderComponent implements OnInit {
    * APIから商品カテゴリーのリストを取得する。
    */
   public fetchCategories(): any {
-
+    this.categoryService.fetchCategories().subscribe(response => this.testJson = response);
   }
 
   // TODO: あとで実装する。
