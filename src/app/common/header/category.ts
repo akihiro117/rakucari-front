@@ -10,5 +10,5 @@ export class Category {
    *  サブカテゴリーがある場合は、ここにサブカテゴリーが入る。
    *  サブカテゴリーがない場合はnullになる。
    */
-  public subCategories?: Category;
+  public subCategories?: Array<Category>;
 }

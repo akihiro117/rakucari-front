@@ -1,5 +1,6 @@
 import { CategoryService } from './category.service';
 import { Component, OnInit } from '@angular/core';
+import { Category } from './category';
 
 @Component({
   selector: 'app-header',
@@ -20,33 +21,8 @@ export class HeaderComponent implements OnInit {
   // public displayedCategoryIndex: number = null;
   public displayedSubCategories: Array<any> = null;
 
-  // ダミーのカテゴリー
-  // TODO: あとで消す
-  public categories = [
-    {
-      name: 'テスト1',
-      url: 'http://localhost:8080/test1',
-      subCategories: [
-        {
-          name: 'サブ1'
-        },
-        {
-          name: 'サブ2'
-        }
-      ]
-    },
-    {
-      name: 'テスト2',
-      url: 'http://localhost:8080/test1',
-      subCategories: [
-        {
-          name: 'さぶ2'
-        }
-      ]
-    }
-  ];
-
-  public testJson: any;
+  // カテゴリーのリスト。
+  public categories: Array<Category>;
 
   constructor(private categoryService: CategoryService) { }
 
@@ -54,12 +30,11 @@ export class HeaderComponent implements OnInit {
     this.fetchCategories();
   }
 
-  // TODO: あとで実装する。
   /**
    * APIから商品カテゴリーのリストを取得する。
    */
   public fetchCategories(): any {
-    this.categoryService.fetchCategories().subscribe(response => this.testJson = response);
+    this.categoryService.fetchCategories().subscribe(response => this.categories = response);
   }
 
   // TODO: あとで実装する。
