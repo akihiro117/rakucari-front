@@ -17,9 +17,8 @@ export class HeaderComponent implements OnInit {
   // サブカテゴリーにhoverしたかどうか
   public subCategoryHover = false;
 
-  // 中項目を表示する大項目のindex
-  // public displayedCategoryIndex: number = null;
-  public displayedSubCategories: Array<any> = null;
+  // 画面に表示するサブカテゴリーのリスト。 
+  public subCategories: Array<any> = null;
 
   // カテゴリーのリスト。
   public categories: Array<Category>;
@@ -57,15 +56,15 @@ export class HeaderComponent implements OnInit {
     this.subCategoryHover = hoverFlug;
   }
 
-  // /**
-  //  * 中項目を表示する大項目のindexを設定する
-  //  * @param index 中項目を表示する大項目のindex
-  //  */
-  // public changeDisplayedCategoryIndex(index: number): void {
-  //   this.displayedCategoryIndex = index;
-  // }
-  public changeDisplayedSubCategories(categories: any): void {
-    this.displayedSubCategories = categories;
+  /**
+   * 画面に表示するサブカテゴリーを設定する。
+   * htmlではhoverしたカテゴリーのサブカテゴリーを引数に設定するようにし、
+   * 「カテゴリーを探す」からhoverをはずすとnullを設定するようにする。
+   * 
+   * @param 設定するサブカテゴリー。
+   */
+  public changeSubCategories(subCategories: any): void {
+    this.subCategories = subCategories;
   }
 
 

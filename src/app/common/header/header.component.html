@@ -12,19 +12,19 @@
           <span (mouseenter)="changeCategoryHover(true)"><b>カテゴリーから探す</b></span>
         </li>
         <ng-container *ngIf="categoryHover || subCategoryHover">
-          <div class="pull-down-list" (mouseleave)="changeDisplayedSubCategories(null)">
+          <div class="pull-down-list" (mouseleave)="changeSubCategories(null)">
             <div class="pull-down-list-group">
               <div>
                 <ng-container *ngFor="let category of categories; index as i">
                   <li class="pull-down-content"
-                    (mouseenter)="changeSubCategoryHover(true); changeDisplayedSubCategories(category.subCategories)">
+                    (mouseenter)="changeSubCategoryHover(true); changeSubCategories(category.subCategories)">
                     <span>{{category.name}}</span>
                   </li>
                 </ng-container>
               </div>
               <div>
-                <ng-container *ngIf="displayedSubCategories != null">
-                  <ng-container *ngFor="let category of displayedSubCategories">
+                <ng-container *ngIf="subCategories != null">
+                  <ng-container *ngFor="let category of subCategories">
                     <li class="sub-pull-down-content">
                       <span>{{category.name}}</span>
                     </li>
