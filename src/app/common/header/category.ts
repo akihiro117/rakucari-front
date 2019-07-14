@@ -3,7 +3,10 @@
  */
 
 export class Category {
+  /** カテゴリー名 */
   public name: string;
+
+  /** カテゴリーのページのURL */
   public url: string;
 
   /** サブカテゴリー。

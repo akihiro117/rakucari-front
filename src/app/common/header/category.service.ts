@@ -1,4 +1,3 @@
-import { CategoryResponse } from './category-response';
 /**
  * カテゴリーに関する処理を提供するservice。
  */
@@ -7,6 +6,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
+import { CategoryResponse } from './category-response';
 
 @Injectable({
   providedIn: 'root'
