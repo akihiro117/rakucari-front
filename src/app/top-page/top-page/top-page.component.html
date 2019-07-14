@@ -1,3 +1,13 @@
-<p>
-  top-page works!
-</p>
+<h3 align="center"><b>最近追加されたアイテム</b></h3>
+
+<!-- カテゴリーごとに最新のもの上位5個ずつくらいとってきて表示する -->
+<!-- Mapをfor文で回してカテゴリーごとに商品情報を出力する。-->
+<div align="center">
+  <ng-container *ngFor="let goodsList of latestAddedGoods | keyvalue">
+    <h4>{{goodsList.key}}</h4>
+    <ng-container *ngFor="let goods of goodsList.value">
+      <img src="{{goods.imageUrl}}" alt="{{goods.goodsName}}の画像" width="40%" height="40%"><br>
+      {{goods.goodsName}}
+    </ng-container>
+  </ng-container>
+</div>
