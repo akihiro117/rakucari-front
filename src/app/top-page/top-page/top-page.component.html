@@ -6,7 +6,7 @@
   <ng-container *ngFor="let goodsList of latestAddedGoods | keyvalue">
     <h4>{{goodsList.key}}</h4>
     <ng-container *ngFor="let goods of goodsList.value">
-      <img src="{{goods.imageUrl}}" alt="{{goods.goodsName}}の画像" width="40%" height="40%"><br>
+      <img src="{{goods.imageUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"><br>
       {{goods.goodsName}}
     </ng-container>
   </ng-container>
