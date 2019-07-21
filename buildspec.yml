@@ -13,4 +13,4 @@ phases:
       - ng build
 artifacts:
   files:
-    - dist/*
+    - dist
