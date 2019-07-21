@@ -8,6 +8,6 @@ phases:
   build:
     commands:
       - ng build
-  artifacts:
-    files:
-      - dist/*
+artifacts:
+  files:
+    - dist/*
