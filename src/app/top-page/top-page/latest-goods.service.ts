@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Goods } from './goods';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
@@ -7,7 +8,7 @@ import { Observable, of } from 'rxjs';
 })
 export class LatestGoodsService {
 
-  constructor() { }
+  constructor(private httpClient: HttpClient) { }
 
   /**
    * カテゴリーごとの最近出品された商品の情報を取得する。
