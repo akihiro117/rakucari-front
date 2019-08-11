@@ -20,14 +20,14 @@ export class LatestGoodsService {
     // TODO:後で本物に置き換える。
     let dummyDatum1 = new Goods();
     dummyDatum1.goodsName = "ダミーの商品1";
-    dummyDatum1.imageUrl = "/assets/images/dummy-goods1/dummy1.png";
+    dummyDatum1.imgUrl = "/assets/images/dummy-goods1/dummy1.png";
 
     let dummyDataList = new Array<Goods>();
     dummyDataList.push(dummyDatum1);
 
     let dummyDatum2 = new Goods();
     dummyDatum2.goodsName = "ダミーの商品2";
-    dummyDatum2.imageUrl = "/assets/images/dummy-goods2/dummy2.png";
+    dummyDatum2.imgUrl = "/assets/images/dummy-goods2/dummy2.png";
 
     let dummyDataList2 = new Array<Goods>();
     dummyDataList2.push(dummyDatum2);
