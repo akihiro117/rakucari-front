@@ -1,3 +1,4 @@
+import { LatestGoodsResponse } from './latest-goods-response';
 import { LatestGoodsService } from './latest-goods.service';
 import { Component, OnInit } from '@angular/core';
 import { Goods } from './goods';
@@ -11,7 +12,7 @@ export class TopPageComponent implements OnInit {
 
   // 商品データ。
   // key: カテゴリー名, value: 商品データのリスト。
-  public latestAddedGoods: Map<string, Array<Goods>>;
+  public latestAddedGoods: LatestGoodsResponse;
 
   constructor(private latestGoodsService: LatestGoodsService) { }
 
