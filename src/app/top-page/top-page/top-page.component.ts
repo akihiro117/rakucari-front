@@ -1,12 +1,11 @@
 import { LatestGoodsResponse } from './latest-goods-response';
 import { LatestGoodsService } from './latest-goods.service';
 import { Component, OnInit } from '@angular/core';
-import { Goods } from './goods';
 
 @Component({
   selector: 'app-top-page',
   templateUrl: './top-page.component.html',
-  styleUrls: ['./top-page.component.sass']
+  styleUrls: ['./top-page.component.scss']
 })
 export class TopPageComponent implements OnInit {
 
@@ -18,6 +17,10 @@ export class TopPageComponent implements OnInit {
 
   ngOnInit() {
     this.fetchLatestAddedGoods();
+  }
+
+  ngAfterViewInit() {
+
   }
 
   /**
