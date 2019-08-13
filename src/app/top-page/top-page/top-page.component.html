@@ -5,9 +5,13 @@
 <div align="center">
   <ng-container *ngFor="let goodsList of latestAddedGoods.latestGoodsList">
     <h4>{{goodsList.categoryName}}</h4>
-    <ng-container *ngFor="let goods of goodsList.recentlyGoodsList">
-      <img src="{{goods.imgUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"><br>
-      {{goods.goodsName}}
-    </ng-container>
+    <div align="center" id="recent-goods-group">
+      <ng-container *ngFor="let goods of goodsList.recentlyGoodsList">
+        <div align="center" id="recent-goods">
+          <img src="{{goods.imgUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"><br>
+          {{goods.goodsName}}
+        </div>
+      </ng-container>
+    </div>
   </ng-container>
 </div>
