@@ -2,3 +2,8 @@
   display: flex; 
 }
 
+div[id^='recent-goods'] {
+  justify-content: flex-start;
+  margin-left: 20px;
+  margin-right: 20px;
+}

@@ -7,8 +7,8 @@
     <ng-container *ngFor="let goodsList of latestAddedGoods.latestGoodsList">
       <h4>{{goodsList.categoryName}}</h4>
       <div align="center" id="recent-goods-group">
-        <ng-container *ngFor="let goods of goodsList.recentlyGoodsList">
-          <div id="recent-goods">
+        <ng-container *ngFor="let goods of goodsList.recentlyGoodsList; index as i;">
+          <div id="{{'recent-goods' + i}}">
             <img src="{{goods.imgUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"><br>
             {{goods.goodsName}}
           </div>
