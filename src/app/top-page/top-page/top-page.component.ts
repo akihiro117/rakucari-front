@@ -19,10 +19,6 @@ export class TopPageComponent implements OnInit {
     this.fetchRecentAddedGoods();
   }
 
-  ngAfterViewInit() {
-
-  }
-
   /**
    * serviceを使用してAPIから最近追加した商品を取得。
    */

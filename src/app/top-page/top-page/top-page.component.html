@@ -1,8 +1,8 @@
 <div class="container">
   <h3 align="center"><b>最近追加されたアイテム</b></h3>
 
-  <!-- カテゴリーごとに最新のもの上位5個ずつくらいとってきて表示する -->
-  <!-- Mapをfor文で回してカテゴリーごとに商品情報を出力する。-->
+  <!-- カテゴリーごとに最近追加された商品を取得して表示する -->
+  <!-- Listをfor文で回してカテゴリーごとに商品情報を出力する。-->
   <div align="center">
     <ng-container *ngFor="let goodsList of recentAddedGoods.recentGoodsList">
       <h4>{{goodsList.categoryName}}</h4>
