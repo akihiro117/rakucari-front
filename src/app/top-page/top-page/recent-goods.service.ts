@@ -7,6 +7,10 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
+
+/**
+ * APIから最近追加された商品を取得するサービスクラス。
+ */
 export class RecentGoodsService {
 
   constructor(private httpClient: HttpClient) { }

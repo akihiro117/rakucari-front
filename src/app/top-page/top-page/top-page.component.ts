@@ -9,8 +9,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TopPageComponent implements OnInit {
 
-  // 商品データ。
-  // key: カテゴリー名, value: 商品データのリスト。
+  // 最近追加された商品情報。
   public recentAddedGoods: RecentGoodsResponse;
 
   constructor(private recentGoodsService: RecentGoodsService) { }
