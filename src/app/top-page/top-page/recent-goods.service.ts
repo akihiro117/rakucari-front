@@ -1,4 +1,4 @@
-import { LatestGoodsResponse } from './latest-goods-response';
+import { RecentGoodsResponse } from './recent-goods-response';
 import { HttpClient } from '@angular/common/http';
 import { Goods } from './goods';
 import { Injectable } from '@angular/core';
@@ -8,7 +8,7 @@ import { map } from 'rxjs/operators';
 @Injectable({
   providedIn: 'root'
 })
-export class LatestGoodsService {
+export class RecentGoodsService {
 
   constructor(private httpClient: HttpClient) { }
 
@@ -18,7 +18,7 @@ export class LatestGoodsService {
    * 
    * @return 最近追加された商品情報(商品のカテゴリー、商品名、商品の画像のURL)の配列
    */
-  public fetchLatestAddedGoods(): Observable<LatestGoodsResponse> {
+  public fetchRecentAddedGoods(): Observable<RecentGoodsResponse> {
     // ダミーのデータ。
     // TODO:後で本物に置き換える。
     // let dummyDatum1 = new Goods();
@@ -43,7 +43,7 @@ export class LatestGoodsService {
     // return of(goodsMap);
     return this.httpClient.get('http://localhost:8080/latest-goods')
       .pipe(map(resJson => {
-        return resJson as LatestGoodsResponse;
+        return resJson as RecentGoodsResponse;
       }));
   }
 }

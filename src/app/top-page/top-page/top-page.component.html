@@ -4,10 +4,10 @@
   <!-- カテゴリーごとに最新のもの上位5個ずつくらいとってきて表示する -->
   <!-- Mapをfor文で回してカテゴリーごとに商品情報を出力する。-->
   <div align="center">
-    <ng-container *ngFor="let goodsList of latestAddedGoods.latestGoodsList">
+    <ng-container *ngFor="let goodsList of recentAddedGoods.recentGoodsList">
       <h4>{{goodsList.categoryName}}</h4>
       <div align="center" id="recent-goods-group">
-        <ng-container *ngFor="let goods of goodsList.recentlyGoodsList; index as i;">
+        <ng-container *ngFor="let goods of goodsList.recentGoodsList; index as i;">
           <div id="{{'recent-goods' + i}}">
             <img src="{{goods.imgUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"><br>
             {{goods.goodsName}}

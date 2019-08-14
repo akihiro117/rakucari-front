@@ -1,5 +1,5 @@
-import { LatestGoodsResponse } from './latest-goods-response';
-import { LatestGoodsService } from './latest-goods.service';
+import { RecentGoodsResponse } from './recent-goods-response';
+import { RecentGoodsService } from './recent-goods.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -11,12 +11,12 @@ export class TopPageComponent implements OnInit {
 
   // 商品データ。
   // key: カテゴリー名, value: 商品データのリスト。
-  public latestAddedGoods: LatestGoodsResponse;
+  public recentAddedGoods: RecentGoodsResponse;
 
-  constructor(private latestGoodsService: LatestGoodsService) { }
+  constructor(private recentGoodsService: RecentGoodsService) { }
 
   ngOnInit() {
-    this.fetchLatestAddedGoods();
+    this.fetchRecentAddedGoods();
   }
 
   ngAfterViewInit() {
@@ -26,10 +26,10 @@ export class TopPageComponent implements OnInit {
   /**
    * serviceを使用してAPIから最近追加した商品を取得。
    */
-  public fetchLatestAddedGoods(): void {
-    this.latestGoodsService.fetchLatestAddedGoods()
+  public fetchRecentAddedGoods(): void {
+    this.recentGoodsService.fetchRecentAddedGoods()
       .subscribe(response => {
-        this.latestAddedGoods = response;
+        this.recentAddedGoods = response;
       });
   }
 
