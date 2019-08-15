@@ -9,7 +9,8 @@
       <div align="center" id="recent-goods-group">
         <ng-container *ngFor="let goods of goodsList.recentGoodsList; index as i;">
           <div id="{{'recent-goods' + i}}">
-            <img src="{{goods.imgUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"><br>
+            <img src="{{goods.imgUrl}}" alt="{{goods.goodsName}}の画像" width="200px" height="200px"
+              (click)="moveToGoodsDetailPage()"><br>
             {{goods.goodsName}}
           </div>
         </ng-container>
