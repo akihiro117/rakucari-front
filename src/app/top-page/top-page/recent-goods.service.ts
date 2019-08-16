@@ -1,7 +1,7 @@
 import { RecentGoodsResponse } from './recent-goods-response';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 
 @Injectable({
@@ -22,7 +22,7 @@ export class RecentGoodsService {
    */
   public fetchRecentAddedGoods(): Observable<RecentGoodsResponse> {
 
-    return this.httpClient.get('http://localhost:8080/latest-goods')
+    return this.httpClient.get('http://localhost:8080/recent-goods')
       .pipe(map(resJson => {
         return resJson as RecentGoodsResponse;
       }));
