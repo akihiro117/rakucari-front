@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
   { path: 'top', loadChildren: './top-page/top-page.module#TopPageModule' },
-  { path: 'goods-detail', loadChildren: './goods-detail/goods-detail.module#GoodsDetailModule' },
+  { path: 'goods-detail/:id', loadChildren: './goods-detail/goods-detail.module#GoodsDetailModule' },
   { path: '**', redirectTo: 'top' }
 ];
 
