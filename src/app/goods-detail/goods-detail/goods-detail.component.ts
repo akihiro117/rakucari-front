@@ -1,6 +1,7 @@
 import { GoodsDetailService } from './goods-detail.service';
 import { Component, OnInit } from '@angular/core';
 import { Goods } from './goods';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-goods-detail',
@@ -13,7 +14,8 @@ export class GoodsDetailComponent implements OnInit {
   public goods: Goods = new Goods();
 
   constructor(
-    private goodsDetailService: GoodsDetailService
+    private goodsDetailService: GoodsDetailService,
+    private route: ActivatedRoute
   ) { }
 
   ngOnInit() {
@@ -24,7 +26,8 @@ export class GoodsDetailComponent implements OnInit {
    * serviceから商品情報を取得して、商品情報の変数に格納する。
    */
   public fetchGoodsDetail(): void {
-    this.goodsDetailService.fetchGoodsDetail('1')
+    const goodsId = this.route.snapshot.paramMap.get('id');
+    this.goodsDetailService.fetchGoodsDetail(goodsId)
       .subscribe(response => {
         this.goods = response.goodsDetail;
       });
