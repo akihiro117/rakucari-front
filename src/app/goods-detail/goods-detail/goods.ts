@@ -9,10 +9,10 @@ export class Goods {
   public imgUrl: string;
 
   /** カテゴリー。 */
-  public category: string;
+  public majorCategory: string;
 
   /** 商品の状態。 */
-  public goodsStatus: string;
+  public useStatus: string;
 
   /** 配送料の負担。 */
   public feeResponsibility: string;
