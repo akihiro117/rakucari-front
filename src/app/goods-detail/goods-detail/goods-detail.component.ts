@@ -26,7 +26,9 @@ export class GoodsDetailComponent implements OnInit {
    * serviceから商品情報を取得して、商品情報の変数に格納する。
    */
   public fetchGoodsDetail(): void {
+    // URLから商品IDを取得。
     const goodsId = this.route.snapshot.paramMap.get('id');
+    // serviceから商品情報を取得し、変数に格納。
     this.goodsDetailService.fetchGoodsDetail(goodsId)
       .subscribe(response => {
         this.goods = response.goodsDetail;
