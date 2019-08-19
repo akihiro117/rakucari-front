@@ -1,6 +1,7 @@
 import { CategoryService } from './category.service';
 import { Component, OnInit } from '@angular/core';
 import { Category } from './category';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -23,7 +24,10 @@ export class HeaderComponent implements OnInit {
   // カテゴリーのリスト。
   public categories: Array<Category>;
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(
+    private categoryService: CategoryService,
+    private router: Router
+  ) { }
 
   ngOnInit() {
     this.fetchCategories();
@@ -82,6 +86,13 @@ export class HeaderComponent implements OnInit {
    */
   public toLoginForm() {
 
+  }
+
+  /**
+   * topページに遷移する。
+   */
+  public moveToTop() {
+    this.router.navigate(['/top']);
   }
 
 }

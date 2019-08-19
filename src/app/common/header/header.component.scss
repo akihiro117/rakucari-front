@@ -9,6 +9,16 @@ $largeDisplayWidth: 800px;
   margin-top: 20px;
 }
 
+// 検索ボックス横のアイコン
+.home {
+  margin-right: 20px;
+  color: #3333FF;
+  font-weight: bold;
+  font-style: italic;
+  font-size: 20px;
+  cursor: pointer;
+}
+
 .search-box-group {
   input {
     background-color: #EEEEEE;
