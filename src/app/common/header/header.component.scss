@@ -1,6 +1,9 @@
-$maxHeaderWidth: 700px;
+// PCの時のヘッダーの幅
+$maxHeaderWidth: 900px;
+// スマホ、タブレットの時のヘッダーの幅
+// TODO: スマホとタブレットで分ける。
 $minHeaderWidth: 300px;
-$largeDisplayWidth: 800px;
+$largeDisplayWidth: 1000px;
 
 // ----------------------------------------------
 // どの画面サイズでも共通
