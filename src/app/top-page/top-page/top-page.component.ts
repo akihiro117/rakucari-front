@@ -36,8 +36,15 @@ export class TopPageComponent implements OnInit {
   /**
    * 最近追加された商品をクリックした時に商品詳細ページに遷移する。
    */
-  public moveToGoodsDetailPage(id: string) {
+  public moveToGoodsDetailPage(id: string): void {
     this.router.navigate([`/goods-detail/${id}`]);
+  }
+
+  /**
+   * 商品出品ページに遷移。
+   */
+  public moveToGoodsRegistrationPage(): void {
+    this.router.navigate(['/put-goods']);
   }
 
 }
