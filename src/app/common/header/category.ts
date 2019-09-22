@@ -3,6 +3,9 @@
  */
 
 export class Category {
+  /** カテゴリーID */
+  public id: string;
+
   /** カテゴリー名 */
   public name: string;
 
