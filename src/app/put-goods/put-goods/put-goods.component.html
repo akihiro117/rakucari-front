@@ -13,17 +13,17 @@
       </div>
       <div class="form-group">
         <label for="category">カテゴリー<span style="color: red">*</span></label>
-        <select id="category" class="form-control">
-          <option>--</option>
+        <select id="category" [(ngModel)]="userInputData.category.id" class="form-control">
+          <option value="">--</option>
           <ng-container *ngFor="let category of goodsOptions.category">
-            <option>{{category.name}}</option>
+            <option [value]="category.id">{{category.name}}</option>
           </ng-container>
         </select>
       </div>
       <div class="form-group">
         <label for="use-status">商品の状態<span style="color: red">*</span></label>
-        <select id="use-status" class="form-control">
-          <option>--</option>
+        <select id="use-status" [(ngModel)]="userInputData.useStatus.id" class="form-control">
+          <option value="">--</option>
           <ng-container *ngFor="let useStatus of goodsOptions.useStatus">
             <option>{{useStatus.useStatus}}</option>
           </ng-container>
@@ -31,8 +31,8 @@
       </div>
       <div class="form-group">
         <label for="responsibility">配送料の負担<span style="color: red">*</span></label>
-        <select id="responsibility" class="form-control">
-          <option>--</option>
+        <select id="responsibility" [(ngModel)]="userInputData.feeResponsibility.id" class="form-control">
+          <option value="">--</option>
           <ng-container *ngFor="let feeResponsibility of goodsOptions.feeResponsibility">
             <option>{{feeResponsibility.feeResponsibility}}</option>
           </ng-container>
@@ -40,8 +40,8 @@
       </div>
       <div class="form-group">
         <label for="src-region">配送元地域<span style="color: red">*</span></label>
-        <select id="src-region" class="form-control">
-          <option>--</option>
+        <select id="src-region" [(ngModel)]="userInputData.srcRegion.id" class="form-control">
+          <option value="">--</option>
           <ng-container *ngFor="let srcRegion of goodsOptions.srcRegion">
             <option>{{srcRegion.srcRegion}}</option>
           </ng-container>
@@ -49,8 +49,8 @@
       </div>
       <div class="form-group">
         <label for="shipping-date">発送日の目安<span style="color: red">*</span></label>
-        <select id="shipping-date" class="form-control">
-          <option>--</option>
+        <select id="shipping-date" [(ngModel)]="userInputData.shippingDate.id" class="form-control">
+          <option value="">--</option>
           <ng-container *ngFor="let shippingDate of goodsOptions.shippingDate">
             <option>{{shippingDate.shippingDate}}</option>
           </ng-container>

@@ -1,3 +1,4 @@
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -8,7 +9,9 @@ import { PutGoodsComponent } from './put-goods/put-goods.component';
   declarations: [PutGoodsComponent],
   imports: [
     CommonModule,
-    PutGoodsRoutingModule
+    PutGoodsRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ]
 })
 export class PutGoodsModule { }
