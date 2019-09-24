@@ -5,7 +5,7 @@ const routes: Routes = [
   { path: 'top', loadChildren: './top-page/top-page.module#TopPageModule' },
   { path: 'goods-detail/:id', loadChildren: './goods-detail/goods-detail.module#GoodsDetailModule' },
   // 商品出品ページ
-  { path: 'put-goods', loadChildren: './put-goods/put-goods.module#PutGoodsModule' },
+  { path: 'register-goods', loadChildren: './register-goods/register-goods.module#RegisterGoodsModule' },
   { path: '**', redirectTo: 'top' }
 ];
 

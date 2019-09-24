@@ -1,14 +1,14 @@
 import { UserInputData } from './user-input-data';
-import { PutGoodsService } from './put-goods.service';
+import { RegisterGoodsService } from './register-goods.service';
 import { Component, OnInit } from '@angular/core';
 import { PageData } from './page-data';
 
 @Component({
-  selector: 'app-put-goods',
-  templateUrl: './put-goods.component.html',
-  styleUrls: ['./put-goods.component.sass']
+  selector: 'app-register-goods',
+  templateUrl: './register-goods.component.html',
+  styleUrls: ['./register-goods.component.sass']
 })
-export class PutGoodsComponent implements OnInit {
+export class RegisterGoodsComponent implements OnInit {
 
   // セレクトリストの値。
   public goodsOptions: PageData = new PageData();
@@ -17,7 +17,7 @@ export class PutGoodsComponent implements OnInit {
   public userInputData: UserInputData = new UserInputData();
 
   constructor(
-    private putGoodsService: PutGoodsService
+    private registerGoodsService: RegisterGoodsService
   ) { }
 
   ngOnInit() {
@@ -40,7 +40,7 @@ export class PutGoodsComponent implements OnInit {
    * API からセレクトリストに表示する値を取得する。
    */
   public fetchPageData(): void {
-    this.putGoodsService.fetchPageData()
+    this.registerGoodsService.fetchPageData()
       .subscribe(response => {
         this.goodsOptions = response;
       });

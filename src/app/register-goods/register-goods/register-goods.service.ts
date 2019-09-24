@@ -11,7 +11,7 @@ import { map } from 'rxjs/operators';
 /**
  * 商品出品画面用のサービスクラス。
  */
-export class PutGoodsService {
+export class RegisterGoodsService {
 
   constructor(
     private httpClient: HttpClient

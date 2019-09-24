@@ -44,7 +44,7 @@ export class TopPageComponent implements OnInit {
    * 商品出品ページに遷移。
    */
   public moveToGoodsRegistrationPage(): void {
-    this.router.navigate(['/put-goods']);
+    this.router.navigate(['/register-goods']);
   }
 
 }

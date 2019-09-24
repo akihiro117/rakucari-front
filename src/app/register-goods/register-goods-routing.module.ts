@@ -1,13 +1,13 @@
-import { PutGoodsComponent } from './put-goods/put-goods.component';
+import { RegisterGoodsComponent } from './register-goods/register-goods.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
 const routes: Routes = [
-  { path: '', component: PutGoodsComponent }
+  { path: '', component: RegisterGoodsComponent }
 ];
 
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class PutGoodsRoutingModule { }
+export class RegisterGoodsRoutingModule { }
